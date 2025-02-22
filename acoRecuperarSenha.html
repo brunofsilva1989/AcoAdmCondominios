@@ -34,7 +34,7 @@
             data: { email: email },
             dataType: "json",
             success: function (response) {
-                mensagem.html('<div class="alert alert-success">' + response.mensagem + '</div>');
+                mensagem.html('<div class="alert alert-' + (response.status === 'sucesso' ? 'success' : 'danger') + '">' + response.mensagem + '</div>');
             },
             error: function () {
                 mensagem.html('<div class="alert alert-danger">Erro ao solicitar recuperação de senha.</div>');

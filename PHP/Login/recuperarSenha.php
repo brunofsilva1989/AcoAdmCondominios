@@ -1,15 +1,14 @@
 <?php
 include_once __DIR__ . "/../../config/db.php";
-require __DIR__ . "/../../vendor/autoload.php";
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+require __DIR__ . "/../../vendor/autoload.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = trim($_POST['email']);
 
-    // Verificar se o e-mail existe no banco
-    $stmt = $pdo->prepare("SELECT id FROM usuarios WHERE email = ?");
+    // Verifica se o e-mail existe na base
+    $stmt = $pdo->prepare("SELECT email FROM usuarios WHERE email = ?");
     $stmt->execute([$email]);
 
     if ($stmt->rowCount() == 0) {
@@ -17,13 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 
-    // Gerar token curto (Apenas 8 caracteres alfanuméricos)
-    $token = substr(bin2hex(random_bytes(16)), 0, 8);
+    // Gerar token e salvar no banco
+    $token = bin2hex(random_bytes(20));
     $expira_em = date('Y-m-d H:i:s', strtotime('+1 hour'));
 
-    // Inserir o token no banco (substituir a coluna token se já existir)
-    $stmt = $pdo->prepare("INSERT INTO password_resets (email, token, expira_em) VALUES (?, ?, ?) 
-                          ON DUPLICATE KEY UPDATE token = VALUES(token), expira_em = VALUES(expira_em)");
+    $stmt = $pdo->prepare("INSERT INTO password_resets (email, token, expira_em) VALUES (?, ?, ?)");
     $stmt->execute([$email, $token, $expira_em]);
 
     // Configurar PHPMailer
