@@ -1,0 +1,20 @@
+body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    color: var(--info-color);
+    text-align: center;
+    align-items: center;
+}
+
+:root {
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #052f57;
+    --body-bg: #7b9db3;
+    --body-color: #2e728e;
+}

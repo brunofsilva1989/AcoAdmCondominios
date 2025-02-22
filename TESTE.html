@@ -1,0 +1,36 @@
+<!-- FILEPATH: /C:/xampp/htdocs/gerar_pix.php -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerador de PIX</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Gerador de PIX</h2>
+    <form action="gerar_pix.php" method="post">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="valor">Valor:</label>
+            <input type="number" class="form-control" id="valor" name="valor" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Gerar PIX</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
+

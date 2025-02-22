@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleto de Cobrança</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- Modal de mensagens personalizadas-->
+    <div class="modal-success me-1 mb-1 d-inline-block">
+        <!-- Button trigger for Success theme modal -->
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#success">
+            Success
+        </button>
+        <!-- Modal de mensagens personalizadas-->
+        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title white" id="modalLabel">ACO ADM Condomínios</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- A mensagem será inserida aqui -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal"><i
+                                class="bx bx-x d-block d-sm-none"></i><span
+                                class="d-none d-sm-block">Fechar</span></button>
+                        <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                            <i class="bx bx-check d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">OK</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <!--<a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>-->
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2" alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu Lateral da Página-->
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastroFinanceiro.html">Cadastro Financeiro</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoViewDadosFinanceiro.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosDownload.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+                <!--Fim do Menu Lateral da Página-->
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!--Logout-->
+            <div class="card text-end">
+                <div class="card-body">
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="/acoLoginPainel.html" id="logoutButton">Sair do Sistema</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inicio do Header da Página -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Índice da Página</h4>
+                </div>
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/painelindex.html">Pagina Inicial</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Geração de Boleto</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Fim do Header da Página -->
+
+            <!--Emissão dos Boletos.-->
+            <section id="multiple-column-form">
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1>Solicitar Pagamento</h1>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form id="paymentForm" method="post">
+                                        <input class="form-control" type="number" name="amount" placeholder="Valor"
+                                            required>
+                                        <br>
+                                        <input class="form-control" type="text" name="description"
+                                            placeholder="Descrição" required>
+                                        <br>
+                                        <input class="form-control" type="email" name="email"
+                                            placeholder="Email do pagador" required>
+                                        <br>
+                                        <input class="form-control" type="text" name="first_name" placeholder="Nome"
+                                            required>
+                                        <br>
+                                        <input class="form-control" type="text" name="last_name" placeholder="Sobrenome"
+                                            required>
+                                        <br>
+                                        <select class="form-select" name="doc_type" required>
+                                            <option value="CPF">CPF</option>
+                                            <option value="CNPJ">CNPJ</option>
+                                        </select>
+                                        <br>
+                                        <input class="form-control" type="text" name="doc_number"
+                                            placeholder="Número do documento" required>
+                                        <br>
+                                        <input class="form-control" type="text" name="address_zip_code"
+                                            placeholder="CEP" required>
+                                        <br>
+                                        <input class="form-control" type="text" name="address_street_name"
+                                            placeholder="Nome da rua" required>
+                                        <br>
+                                        <input class="form-control" type="number" name="address_street_number"
+                                            placeholder="Número da residência" required>
+                                        <br>
+                                        <select class="form-select" name="payment_type_id" required>
+                                            <option value="bolbradesco">Boleto</option>
+                                            <option value="pix">Pix</option>
+                                            <!-- Adicione outras opções de pagamento aqui, se necessário -->
+                                        </select>
+                                        <br>
+                                        <button class="btn btn-outline-primary" type="submit" name="action"
+                                            value="generate">Gerar Pagamento</button>
+                                        <!-- Para a opção de link de pagamento, você pode adicionar outro botão ou link aqui -->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Resposta após gerar o boleto-->
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Dados do Boleto Emitido</h2>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <div id="responseContainer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Tabela de Boletos emitidos-->
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <h2>Boletos Emitidos</h2>
+                                        <table class="table table-striped" id="tabelaBoletos">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">ID</th>
+                                                    <th scope="col">Descrição</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">ID Boleto</th>
+                                                    <th scope="col">Data de Emissão</th>
+                                                    <th scope="col">Vencimento</th>
+                                                    <th scope="col">Valor</th>
+                                                    <th scope="col">Status</th>
+                                                    <th scope="col">Link</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tabelaBoletos">
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim da Tabela de Boletos emitidos-->
+
+                <!--Cancelamento de boletos.-->
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Cancelar Boleto</h2>
+                                <div class="card-content">
+                                    <div class="card-body">
+                                        <form id="cancelarBoletoForm">
+                                            <input class="form-control" type="text" id="payment_Id" name="payment_Id"
+                                                placeholder="ID do pagamento" required>
+                                            <br>
+                                            <button class="btn btn-outline-primary" type="submit">Cancelar
+                                                Boleto</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Fim do Cancelamento de boletos.-->
+            </section>
+
+
+
+            <!--Footer-->
+            <footer class="">
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2023 &copy; ACO Adm de Condomínios</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-black"><i class="bi bi-arrow-clockwise"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--End Footer-->
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+
+    <script>
+        // Função para preencher gerar boleto com os dados do cliente
+        // $(document).ready(function () {
+        //     $('#boletoForm').submit(function (e) {
+        //         e.preventDefault();
+        //         $.ajax({
+        //             url: '/PHP/apiMercadoPago/acoBoletoMercadoPago.php',
+        //             type: 'POST',
+        //             data: $(this).serialize(),
+        //             dataType: 'json',
+        //             success: function (response) {
+        //                 if (response.status === 'success') {
+        //                     // Tratar a resposta de sucesso
+        //                     $('#responseContainer').html(`Boleto gerado com sucesso. <a href="${response.boleto_url}" target="_blank" class="btn btn-outline-primary">Clique aqui para ver o boleto</a>`);
+        //                 } else {
+        //                     // Tratar erros
+        //                     $('#responseContainer').html('Erro: ' + response.message);
+        //                 }
+        //             },
+        //             error: function (xhr, status, error) {
+        //                 console.log('Erro na chamada AJAX:', xhr, status, error);
+        //             }
+        //         });
+        //     });
+        // });
+
+        $(document).ready(function () {
+            $('#paymentForm').submit(function (e) {
+                $('#responseContainer').html('Teste de carga do conteúdo');
+                e.preventDefault();                
+                var formData = $(this).serialize();
+                $.ajax({
+                    url: '/PHP/apiMercadoPago/acoBoletoMercadoPago.php', // Ajuste o URL conforme necessário
+                    type: 'POST',
+                    data: formData,
+                    dataType: 'json',
+                    success: function (response) {                        
+                        if (response.status === 'success' && response.message === 'Boleto gerado com sucesso') {
+                            showMessage(response.message);
+                            // Verifique o tipo de pagamento para fornecer o link apropriado
+                            if (response.content.payment_type_id === 'bolbradesco') {
+                                // Boleto
+                                $('#responseContainer').html(`<p>Boleto gerado com sucesso.</p> <a href="${response.content.transaction_details.external_resource_url}" target="_blank" class="btn btn-outline-primary">Clique aqui para ver o boleto</a>`);
+                                showMessage(response.message);
+                            } else if (response.content.payment_type_id === 'pix' && response.message === 'Pix gerado com sucesso') {
+                                // Pix
+                                // Substitua 'pixCode' pela chave de resposta correta da API do Mercado Pago para Pix
+                                $('#responseContainer').html(`Pix gerado com sucesso. Código Pix: ${response.content.pixCode}`);
+                                showMessage(response.message);
+                            }
+                            // Adicione outros métodos de pagamento conforme necessário
+                        } else {
+                            // Tratar erros
+                            $('#responseContainer').html('Erro: ' + response.message);
+                            showMessage(response.message);
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.log('Erro na chamada AJAX:', xhr, status, error);                        
+                    }
+                });
+            });
+        });
+
+
+
+        //Cancelamento de boletos.
+        document.getElementById('cancelarBoletoForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var paymentIdInput = document.getElementById('payment_Id');
+            var paymentId = paymentIdInput.value;
+
+            // Aqui você fará a chamada AJAX para o script PHP que executa o cancelamento
+            fetch('/PHP/apiMercadoPago/cancelamento.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ paymentId: paymentId })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    showMessage(data.message); // Mensagem de sucesso ou erro
+                    if (data.status === 'success') {
+                        paymentIdInput.value = '';
+                        carregarBoletos(); // Atualiza a tabela de boletos
+                        showMessage(data.message);                        
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao cancelar o boleto:', error);
+                });
+        });
+
+
+        // Função que carrega os boletos e atualiza a tabela
+        function carregarBoletos() {
+            $.ajax({
+                url: '/PHP/apiMercadoPago/acoBuscarBoletos.php',
+                type: 'GET',
+                dataType: 'json',
+                success: function (boletos) {
+                    var tabela = $('#tabelaBoletos tbody');
+                    tabela.empty(); // Limpa a tabela antes de adicionar novos dados
+
+                    boletos.forEach(function (boleto) {
+                        var linha = '<tr>' +
+                            '<td>' + boleto.id + '</td>' +
+                            '<td>' + boleto.description + '</td>' +
+                            '<td>' + boleto.email + '</td>' +
+                            '<td>' + boleto.payment_id + '</td>' +
+                            '<td>' + boleto.creation_date + '</td>' +
+                            '<td>' + boleto.data_vencimento + '</td>' +
+                            '<td>' + boleto.amount + '</td>' +
+                            '<td>' + boleto.status + '</td>' +
+                            '<td><a href="' + boleto.boleto_url + '" target="_blank" class="btn btn-outline-primary">Ver Boleto</a></td>' +
+                            '</tr>';
+                        tabela.append(linha);
+                    });
+                },
+                error: function () {
+                    showMessage('Erro ao carregar boletos.');
+                }
+            });
+        }
+
+        // Carregar boletos quando o documento estiver pronto
+        $(document).ready(function () {
+            carregarBoletos();
+        });
+
+        // Função para exibir uma mensagem de modal personalizada
+        function showMessage(message) {
+            // Define o texto do corpo do modal
+            $('#messageModal .modal-body').text(message);
+
+            // Exibe o modal
+            var myModal = new bootstrap.Modal(document.getElementById('messageModal'));
+            myModal.show();
+        }
+
+    </script>
+</body>
+
+</html>

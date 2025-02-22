@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleto de Cobrança</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <!-- Modal de mensagens personalizadas-->
+    <div class="modal-success me-1 mb-1 d-inline-block">
+        <!-- Button trigger for Success theme modal -->
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#success">
+            Success
+        </button>
+        <!-- Modal de mensagens personalizadas-->
+        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title white" id="modalLabel">ACO ADM Condomínios</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- A mensagem será inserida aqui -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal"><i
+                                class="bx bx-x d-block d-sm-none"></i><span
+                                class="d-none d-sm-block">Fechar</span></button>
+                        <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                            <i class="bx bx-check d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">OK</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <!--<a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>-->
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2" alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu Lateral da Página-->
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastroFinanceiro.html">Cadastro Financeiro</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoViewDadosFinanceiro.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-breadcrumb.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+                <!--Fim do Menu Lateral da Página-->
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!-- Inicio do Header da Página -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Índice da Página</h4>
+                </div>
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/painelindex.html">Pagina Inicial</a></li>
+                            <li class="breadcrumb-item"><a href="/acoCadastrarClientes.html">Cadastro de Clientes</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Alterar Dados Cliente</li>
+                        </ol>
+                    </nav>                    
+                </div>
+            </div>
+
+
+            <!--Emissão dos Boletos.-->
+            <section id="multiple-column-form">
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1>Solicitar Boleto</h1>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form action="geraBoleto.php" method="post">
+                                        <!-- Dados do Boleto -->
+                                        <h3>Dados do Boleto</h3>
+                                        <label for="seuNumero">Seu Número:</label>
+                                        <input type="text" class="form-control" name="seuNumero" required>
+
+                                        <label for="valorNominal">Valor Nominal:</label>
+                                        <input type="text" class="form-control" name="valorNominal" required>
+
+                                        <label for="dataVencimento">Data de Vencimento:</label>
+                                        <input type="date" class="form-control" name="dataVencimento" required><br>
+
+                                        <!-- Dados do Pagador -->
+                                        <h3>Dados do Pagador</h3>
+                                        <label for="cliente_id">Cliente:</label>
+                                        <select id="clienteSelect" class="form-control" name="cliente_id" required
+                                            onchange="preencherCampos()">
+
+                                        </select>
+
+                                        <!-- Campos que serão preenchidos automaticamente -->
+                                        <label for="nome">Nome:</label>
+                                        <input type="text" id="nomePagador" class="form-control" name="nome" value=""
+                                            required>
+
+                                        <label for="endereco">Endereco:</label>
+                                        <input type="text" id="logradouroPagador" class="form-control" name="endereco"
+                                            value="" required><br>
+
+                                        <label for="numero">Número:</label>
+                                        <input type="text" class="form-control" name="numero" value="" required><br>
+
+                                        <label for="bairro">Bairro:</label>
+                                        <input type="text" class="form-control" name="bairro" value="" required><br>
+
+                                        <label for="cidade">Cidade:</label>
+                                        <input type="text" class="form-control" name="cidade" value="" required><br>
+
+                                        <label for="estado">Estado (UF):</label>
+                                        <input type="text" class="form-control" name="estado" maxlength="2" value=""
+                                            required><br>
+
+                                        <label for="cep">CEP:</label>
+                                        <input type="text" class="form-control" name="cep" value="" required><br>
+
+                                        <input type="submit" class="btn btn-light-secondary me-1 mb-1"
+                                            value="Gerar Boleto">
+                                    </form>
+
+                                    <!-- Este input armazena os dados dos clientes em formato JSON -->
+                                    <input type="hidden" id="clientesData" value=''>
+
+                                    <div class="card">
+                                        <div class="card-header text-center">
+                                            <h1>Boletos Gerados</h1>
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-striped" id="dados-boletos">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Id</th>
+                                                        <th>Nome</th>
+                                                        <th>Valor</th>
+                                                        <th>Descrição</th>
+                                                        <th>Data Vencimento</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="dados-boletos">
+                                                    <!--Aqui vai ser carregado os dados do condominio cadastrado-->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Tabela com condominios Cadastrados-->
+
+            <!--Fim da Tabela com condominios Cadastrados-->
+
+            <!--Footer-->
+            <footer class="">
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2023 &copy; ACO Adm de Condomínios</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-black"><i class="bi bi-arrow-clockwise"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--End Footer-->
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+
+    <script>
+        //Função para preencher os campos do pagador automaticamente
+        $(document).ready(function () {
+            $('form').on('submit', function (e) {
+                e.preventDefault(); // Prevenir a submissão padrão do formulário
+
+                var formData = $(this).serialize(); // Capturar os dados do formulário
+
+                // Enviar os dados via Ajax
+                $.ajax({
+                    type: 'POST',
+                    url: 'geraBoleto.php',
+                    data: formData,
+                    success: function (response) {
+                        // Tratar a resposta aqui
+                        console.log(response); // Para fins de depuração
+                        // Exemplo: Atualizar a tabela de boletos ou mostrar uma mensagem
+                    },
+                    error: function () {
+                        showMessage('Erro ao gerar boleto');
+                    }
+                });
+            });
+        });
+
+        //preencher campos do pagador automaticamente
+
+        function preencherCampos() {
+            var clientesData = JSON.parse($('#clientesData').val());
+            var clienteId = $('#clienteSelect').val();
+
+            for (var i = 0; i < clientesData.length; i++) {
+                if (clientesData[i].id == clienteId) {
+                    $('#nomePagador').val(clientesData[i].nome);
+                    $('#logradouroPagador').val(clientesData[i].logradouro);
+                    $('#numeroPagador').val(clientesData[i].numero);
+                    $('#bairroPagador').val(clientesData[i].bairro);
+                    $('#cidadePagador').val(clientesData[i].cidade);
+                    $('#estadoPagador').val(clientesData[i].estado);
+                    $('#cepPagador').val(clientesData[i].cep);
+                }
+            }
+        }
+
+        // Função para exibir uma mensagem de modal personalizada
+        function showMessage(message) {
+            // Define o texto do corpo do modal
+            $('#messageModal .modal-body').text(message);
+
+            // Exibe o modal
+            var myModal = new bootstrap.Modal(document.getElementById('messageModal'));
+            myModal.show();
+        }
+    </script>
+</body>
+
+</html>

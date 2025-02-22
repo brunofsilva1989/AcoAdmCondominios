@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mazer Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/pages/auth.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="auth">
+        <div class="row h-100">
+            <div class="col-lg-5 col-12 col-sm-1 pb-5 d-flex mb-4 justify-content-center align-items-center">
+                <div id="auth-left">
+                    <div class="auth-logo d-flex mb-4 justify-content-center align-items-center">
+                        <a href="/acoLoginPainel.html"><img class="auth-logo-center w-50 h-50 img-fluid" src="img/logo.png" alt="Logo"></a>
+                    </div>
+                    <h4 class="text-center">Log in.</h4>
+                    <p class="text-center">Faça login com os seus dados, para acesso ao painel da ACO.</p>
+
+                    <form id="loginForm" method="post">
+                        <div class="form-group position-relative has-icon-left mb-4">
+                            <input type="email" name="email" class="form-control form-control-sm" placeholder="E-mail">
+                            <div class="form-control-icon">
+                                <i class="bi bi-person"></i>
+                            </div>
+                        </div>
+                        <div class="form-group position-relative has-icon-left mb-4">
+                            <input type="password" name="senha" class="form-control form-control-sm"
+                                placeholder="Senha">
+                            <div class="form-control-icon">
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+                        </div>
+                        <div class="form-check form-check-sm d-flex align-items-end">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Mantenha-me conectado
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-sm shadow-sm mt-2">Log in</button>
+                    </form>
+                    <div class="text-center text-sm ">
+                        <p class="text-gray-600">Não tem uma conta? <a href="/acoCadastroLogin.html"
+                                class="font-bold">Inscrever-se</a>.</p>
+                        <p><a class="font-bold" href="/acoEsqueciSenha.html">Esqueceu sua senha?</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 d-none d-lg-block">
+                <div id="auth-right">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/js/mensagensAlert.js"></script>
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#loginForm").on('submit', function (e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/PHP/Login/login.php',
+                type: 'post',
+                data: $(this).serialize(),
+                success: function (response) {
+                    if (response === "Login bem-sucedido") {
+                        window.location.href = './painelindex.html';
+                    } else {
+                        alert(response); // Mostra a mensagem de erro
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error("Erro AJAX: ", status, error);
+                }
+
+            });
+        });
+    });
+
+</script>
+
+</html>

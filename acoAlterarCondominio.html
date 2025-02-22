@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Dados do Condomínio</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="modal-success me-1 mb-1 d-inline-block">
+        <!-- Button trigger for Success theme modal -->
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#success">
+            Success
+        </button>
+        <!-- Modal de mensagens personalizadas-->
+        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title white" id="modalLabel">ACO ADM Condomínios</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- A mensagem será inserida aqui -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal"><i
+                                class="bx bx-x d-block d-sm-none"></i><span
+                                class="d-none d-sm-block">Fechar</span></button>
+                        <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                            <i class="bx bx-check d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">OK</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <!--<a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>-->
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2"
+                                    alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastroFinanceiro.html">Cadastro Financeiro</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoViewDadosFinanceiro.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosDownload.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x">TESTE<i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!--Logout-->
+            <div class="card text-end">
+                <div class="card-body">
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="/acoLoginPainel.html" id="logoutButton">Sair do Sistema</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Índice da Página</h4>
+                </div>
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/painelindex.html">Pagina Inicial</a></li>
+                            <li class="breadcrumb-item"><a href="/acoCadastrarCondominio.html">Cadastro de
+                                    Condominios</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Alterar Dados do Condominio</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!--Alterar dados Condominio Inicio-->
+            <section id="multiple-column-form">
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1>Alterar Cadastro de Condomínios</h1>
+                                <h4>&nbsp;Altere os dados do condomínio.</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form class="form-control" id="updateForm" method="post">
+                                        <input type="hidden" class="form-control" name="id" value="id">
+
+                                        <label for="nome">Nome Condominio:</label>
+                                        <input type="text" id="nome" class="form-control" name="nome" required>
+                                        <br>
+
+                                        <label for="endereco">Endereço:</label>
+                                        <input type="text" id="endereco" name="endereco" value="" class="form-control"
+                                            required>
+                                        <br>
+
+                                        <label for="cep">Cep:</label>
+                                        <input type="text" id="cep" name="cep" value="" class="form-control" required>
+                                        <br>
+
+                                        <label for="cidade">Cidade:</label>
+                                        <input type="text" id="cidade" name="cidade" value="" class="form-control"
+                                            required>
+                                        <br>
+
+                                        <label for="estado">Estado:</label>
+                                        <input type="text" id="estado" name="estado" value="" class="form-control"
+                                            required>
+                                        <br>
+
+                                        <label for="numeroUnidades">Número de Unidades:</label>
+                                        <input type="number" id="numeroUnidades" name="numeroUnidades" value="" required
+                                            class="form-control">
+                                        <br>
+
+                                        <label for="areasComuns">Áreas Comuns:</label>
+                                        <textarea type="text" id="areasComuns" name="areasComuns" value=""
+                                            class="form-control" required></textarea>
+                                        <br>
+
+                                        <input type="button" value="Alterar" class="btn btn-primary"
+                                            onclick="updateCondominio()">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Alterar dados Condominio Fim-->
+
+
+            <!--Footer-->
+            <footer class="">
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2023 &copy; ACO Adm de Condomínios</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-black"><i class="bi bi-arrow-clockwise"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--End Footer-->
+
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // função é responsável por enviar um pedido POST para o servidor para atualizar os dados do condomínio.
+        function updateCondominio() {
+            var formData = $('#updateForm').serialize();
+
+            // Exibir os dados do formulário no console de uma forma mais legível
+            var formDataArray = $('#updateForm').serializeArray();
+            var formDataObject = {};
+
+            $.each(formDataArray, function (i, field) {
+                formDataObject[field.name] = field.value;
+            });
+
+            console.log(formDataObject);  // Exibir o objeto no console
+            $.ajax({
+                type: 'POST',
+                url: '/PHP/Condominios/acoAtualizarDadosCondominio.php',
+                data: formData,
+                dataType: 'json',
+                success: function (response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sucesso',
+                            text: response.message
+                        }).then(function () {
+                            setTimeout(function () {
+                                window.location.href = "acoCadastrarCondominio.html";
+                            }, 2500);                            
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Erro',
+                            text: response.message
+                        });
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    console.error('Erro:', errorThrown); // Mostrar o erro
+                    console.error('Status:', textStatus); // Mostrar o status do erro
+                    console.error('Response:', jqXHR.responseText); // Mostrar a resposta completa
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Houve um erro ao atualizar os dados.'
+                    });
+                }
+            });
+        }
+
+
+        //função auxiliar usada para obter o valor de um parâmetro específico da URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+
+        // Obter dados do condomínio quando a página é carregada.
+        $(document).ready(function () {
+            var id = getParameterByName('id'); // Supondo que você tenha uma função para obter parâmetros da URL
+
+            if (id) {
+                $.get('/PHP/Condominios/acoAlterarCondominio.php', { id: id }, function (response) {
+                    if (response && response.success) { // Verifica se a resposta e o sucesso existem para evitar erros
+                        $('#updateForm input[name="id"]').val(response.data.id || '');
+                        $('#nome').val(response.data.nome || '');
+                        $('#endereco').val(response.data.endereco || '');
+                        $('#cep').val(response.data.cep || '');
+                        $('#cidade').val(response.data.cidade || '');
+                        $('#estado').val(response.data.estado || '');
+                        $('#numeroUnidades').val(response.data.numeroUnidades || '');
+                        $('#areasComuns').val(response.data.areasComuns || '');
+                    } else {
+                        showMessage('Erro ao buscar os dados dos condomínios.');
+                    }
+                }).fail(function () { // Adiciona um manipulador de falhas para tratar erros de rede ou do servidor
+                    showMessage('Erro ao comunicar com o servidor. Por favor, tente novamente mais tarde.');
+                });
+            } else {
+                showMessage('ID não fornecido na URL.');
+            }
+        });
+
+        // Função para exibir uma mensagem de modal personalizada
+        function showMessage(message) {
+            // Define o texto do corpo do modal
+            $('#messageModal .modal-body').text(message);
+
+            // Exibe o modal
+            var myModal = new bootstrap.Modal(document.getElementById('messageModal'));
+            myModal.show();
+        }
+    </script>
+</body>
+
+</html>

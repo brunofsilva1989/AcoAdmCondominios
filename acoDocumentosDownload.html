@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Documentos ACO</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/toastify/toastify.css">
+    <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+</head>
+
+<body>
+
+
+
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2"
+                                    alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoRelatoriosGeraisFin.html">Relatórios</a>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosDownload.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!--Logout-->
+            <div class="card text-end">
+                <div class="card-body">
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="/acoLoginPainel.html" id="logoutButton">Sair do Sistema</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inicio do Header da Página -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Índice da Página</h4>
+                </div>
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/painelindex.html">Pagina Inicial</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Gerenciamento de Documentos</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Fim do Header da Página -->
+
+            <section class="section">
+                
+
+            </section>
+
+            <!--Footer-->
+            <footer class="">
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2023 &copy; ACO Adm de Condomínios</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-black"><i class="bi bi-arrow-clockwise"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--End Footer-->
+
+        </div>
+
+
+
+    </div>
+    </div>
+
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- filepond validation -->
+    <script
+        src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script>
+    <script
+        src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+
+    <!-- image editor -->
+    <script
+        src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-filter/dist/filepond-plugin-image-filter.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+
+    <!-- toastify -->
+    <script src="assets/vendors/toastify/toastify.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+    <!-- filepond -->
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+    <script>
+
+        //Upload de Arquivo e Pesquisa de Arquivo
+        $(document).ready(function () {
+            $('#upload-form').submit(function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                $.ajax({
+                    url: '/PHP/Documentos/acoUploadArquivos.php',
+                    type: 'POST',
+                    data: formData,
+                    success: function (response) {
+                        showMessage(response);
+                        $('#upload-form input[type="file"]').val('');
+
+                    },
+
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    error: function (xhr, status, error) {
+                        showMessage("Erro: " + xhr.responseText);
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+
+            // Pesquisa de Arquivo
+            $('#search-form').submit(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '/PHP/Documentos/acoPesquisarArquivo.php',
+                    type: 'GET',
+                    data: $(this).serialize(),
+                    success: function (data) {
+                        var files = JSON.parse(data);
+                        displaySearchResults(files);
+                    }
+                });
+            });
+
+            function displaySearchResults(files) {
+                var resultsDiv = $('#search-results');
+                resultsDiv.empty();
+
+                if (files.length === 0) {
+                    resultsDiv.append('<p>Nenhum arquivo encontrado.</p>');
+                    return;
+                }
+
+                files.forEach(function (file) {
+                    var fileElement = $('<div></div>').addClass('file');
+                    fileElement.append($('<h3></h3>').text(file.nome));
+                    fileElement.append($('<p></p>').text('Tipo: ' + file.tipo));
+
+                    // Botão de Visualização
+                    var visualizarBtn = $('<a class="btn btn-outline-secondary"></a>')
+                        .attr('href', '/PHP/Documentos/acoVisualizar.php?file=' + file.caminho)
+                        .attr('target', '_blank')
+                        .text('Visualizar');
+                    fileElement.append(visualizarBtn);
+
+                    // Botão de Download
+                    var downloadBtn = $('<a class="btn btn-outline-secondary"></a>')
+                        .attr('href', '/PHP/Documentos/acoBaixar.php?file=' + file.caminho)
+                        .attr('download', '')
+                        .text('Baixar');
+                    fileElement.append(downloadBtn);
+                    showMessage("Download realizado com sucesso!");
+
+                    resultsDiv.append(fileElement);
+                    showMessage("Arquivo encontrado com sucesso!");
+
+                });
+            }
+
+        });
+
+        // Função para exibir uma mensagem de modal personalizada
+        function showMessage(message) {
+            // Define o texto do corpo do modal
+            $('#messageModal .modal-body').text(message);
+
+            // Exibe o modal
+            var myModal = new bootstrap.Modal(document.getElementById('messageModal'));
+            myModal.show();
+        }
+
+
+
+
+
+
+        // register desired plugins...
+        FilePond.registerPlugin(
+            // validates the size of the file...
+            FilePondPluginFileValidateSize,
+            // validates the file type...
+            FilePondPluginFileValidateType,
+
+            // calculates & dds cropping info based on the input image dimensions and the set crop ratio...
+            FilePondPluginImageCrop,
+            // preview the image file type...
+            FilePondPluginImagePreview,
+            // filter the image file
+            FilePondPluginImageFilter,
+            // corrects mobile image orientation...
+            FilePondPluginImageExifOrientation,
+            // calculates & adds resize information...
+            FilePondPluginImageResize,
+        );
+
+        // Filepond: Basic
+        FilePond.create(document.querySelector('.basic-filepond'), {
+            allowImagePreview: false,
+            allowMultiple: false,
+            allowFileEncode: false,
+            required: false
+        });
+
+        // Filepond: Multiple Files
+        FilePond.create(document.querySelector('.multiple-files-filepond'), {
+            allowImagePreview: false,
+            allowMultiple: true,
+            allowFileEncode: false,
+            required: false
+        });
+
+        // Filepond: With Validation
+        FilePond.create(document.querySelector('.with-validation-filepond'), {
+            allowImagePreview: false,
+            allowMultiple: true,
+            allowFileEncode: false,
+            required: true,
+            acceptedFileTypes: ['image/png'],
+            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                // Do custom type detection here and return with promise
+                resolve(type);
+            })
+        });
+
+        // Filepond: ImgBB with server property
+        FilePond.create(document.querySelector('.imgbb-filepond'), {
+            allowImagePreview: false,
+            server: {
+                process: (fieldName, file, metadata, load, error, progress, abort) => {
+                    // We ignore the metadata property and only send the file
+
+                    const formData = new FormData();
+                    formData.append(fieldName, file, file.name);
+
+                    const request = new XMLHttpRequest();
+                    // you can change it by your client api key
+                    request.open('POST', 'https://api.imgbb.com/1/upload?key=762894e2014f83c023b233b2f10395e2');
+
+                    request.upload.onprogress = (e) => {
+                        progress(e.lengthComputable, e.loaded, e.total);
+                    };
+
+                    request.onload = function () {
+                        if (request.status >= 200 && request.status < 300) {
+                            load(request.responseText);
+                        }
+                        else {
+                            error('oh no');
+                        }
+                    };
+
+                    request.onreadystatechange = function () {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                let response = JSON.parse(this.responseText);
+
+                                Toastify({
+                                    text: "Success uploading to imgbb! see console f12",
+                                    duration: 3000,
+                                    close: true,
+                                    gravity: "bottom",
+                                    position: "right",
+                                    backgroundColor: "#4fbe87",
+                                }).showToast();
+
+                                console.log(response);
+                            } else {
+                                Toastify({
+                                    text: "Failed uploading to imgbb! see console f12",
+                                    duration: 3000,
+                                    close: true,
+                                    gravity: "bottom",
+                                    position: "right",
+                                    backgroundColor: "#ff0000",
+                                }).showToast();
+
+                                console.log("Error", this.statusText);
+                            }
+                        }
+                    };
+
+                    request.send(formData);
+                }
+            }
+        });
+
+        // Filepond: Image Preview
+        FilePond.create(document.querySelector('.image-preview-filepond'), {
+            allowImagePreview: true,
+            allowImageFilter: false,
+            allowImageExifOrientation: false,
+            allowImageCrop: false,
+            acceptedFileTypes: ['image/png', 'image/jpg', 'image/jpeg'],
+            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                // Do custom type detection here and return with promise
+                resolve(type);
+            })
+        });
+
+        // Filepond: Image Crop
+        FilePond.create(document.querySelector('.image-crop-filepond'), {
+            allowImagePreview: true,
+            allowImageFilter: false,
+            allowImageExifOrientation: false,
+            allowImageCrop: true,
+            acceptedFileTypes: ['image/png', 'image/jpg', 'image/jpeg'],
+            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                // Do custom type detection here and return with promise
+                resolve(type);
+            })
+        });
+
+        // Filepond: Image Exif Orientation
+        FilePond.create(document.querySelector('.image-exif-filepond'), {
+            allowImagePreview: true,
+            allowImageFilter: false,
+            allowImageExifOrientation: true,
+            allowImageCrop: false,
+            acceptedFileTypes: ['image/png', 'image/jpg', 'image/jpeg'],
+            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                // Do custom type detection here and return with promise
+                resolve(type);
+            })
+        });
+
+        // Filepond: Image Filter
+        FilePond.create(document.querySelector('.image-filter-filepond'), {
+            allowImagePreview: true,
+            allowImageFilter: true,
+            allowImageExifOrientation: false,
+            allowImageCrop: false,
+            imageFilterColorMatrix: [
+                0.299, 0.587, 0.114, 0, 0,
+                0.299, 0.587, 0.114, 0, 0,
+                0.299, 0.587, 0.114, 0, 0,
+                0.000, 0.000, 0.000, 1, 0
+            ],
+            acceptedFileTypes: ['image/png', 'image/jpg', 'image/jpeg'],
+            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                // Do custom type detection here and return with promise
+                resolve(type);
+            })
+        });
+
+        // Filepond: Image Resize
+        FilePond.create(document.querySelector('.image-resize-filepond'), {
+            allowImagePreview: true,
+            allowImageFilter: false,
+            allowImageExifOrientation: false,
+            allowImageCrop: false,
+            allowImageResize: true,
+            imageResizeTargetWidth: 200,
+            imageResizeTargetHeight: 200,
+            imageResizeMode: 'cover',
+            imageResizeUpscale: true,
+            acceptedFileTypes: ['image/png', 'image/jpg', 'image/jpeg'],
+            fileValidateTypeDetectType: (source, type) => new Promise((resolve, reject) => {
+                // Do custom type detection here and return with promise
+                resolve(type);
+            })
+        });
+    </script>
+</body>
+
+</html>

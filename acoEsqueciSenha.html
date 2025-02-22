@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aco Adm Condomínio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/pages/auth.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="auth">
+
+        <div class="row h-100">
+            <div class="col-lg-5 col-12">
+                <div id="auth-left">
+                    <div class="auth-logo">
+                        <a href="/painelindex.html"><img src="img/logo.png" height="150px" width="60px" alt="Logo"></a>
+                    </div>
+                    <h4 class="auth-title">Esqueceu sua senha?</h4>                    
+                    <p class="auth-subtitle mb-5">Insira seu e-mail e enviaremos um link para redefinição de senha.</p>
+
+                    <form id="formRecuperarSenha">
+                        <div class="form-group position-relative has-icon-left mb-4">
+                            <input type="email" class="form-control form-control-xl" placeholder="Email">
+                            <div class="form-control-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Send</button>
+                    </form>
+                    <div class="text-center mt-5 text-lg fs-4">
+                        <p class='text-gray-600'>Lembrou-se da sua conta? <a href="/acoLoginPainel.html"
+                                class="font-bold">Log
+                                in</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 d-none d-lg-block">
+                <div id="auth-right">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/vendors/apexcharts/apexcharts.js"></script>
+<script src="assets/js/pages/dashboard.js"></script>
+<script src="/js/mensagensAlert.js"></script>
+<script src="assets/js/main.js"></script>
+<script>    
+    $(document).ready(function () {
+        $("#formRecuperarSenha").submit(function (e) {
+            e.preventDefault(); // Impede o redirecionamento padrão
+
+            var email = $("input[type='email']").val(); // Pega o e-mail digitado
+            var mensagem = $(".auth-subtitle"); // Onde vamos mostrar a resposta
+
+            // Limpa mensagens anteriores
+            mensagem.html("Enviando...");
+
+            $.ajax({
+                type: "POST",
+                url: "PHP/Login/recuperarSenha.php", // Arquivo PHP que processa o envio do e-mail
+                data: { email: email },
+                dataType: "json",
+                success: function (response) {
+                    if (response.status === "sucesso") {
+                        mensagem.html('<div class="alert alert-success">' + response.mensagem + '</div>');
+                    } else {
+                        mensagem.html('<div class="alert alert-danger">' + response.mensagem + '</div>');
+                    }
+                },
+                error: function () {
+                    mensagem.html('<div class="alert alert-danger">Erro ao enviar solicitação.</div>');
+                }
+            });
+        });
+    });
+</script>
+
+</html>

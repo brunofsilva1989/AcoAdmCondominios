@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Documentos ACO</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaFinanceira.php">Cobranças</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoRelatoriosGeraisFin.html">Rel. Financeiros</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaEnvio.html">Sistema de Envio</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="component-alert.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-badge.html">Sol. Pediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-breadcrumb.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Docs. Condomínio</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-badge.html">Sol. Pediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="component-breadcrumb.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <!-- <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header> -->
+
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
+                        <div class="col-12 col-md-6 order-md-1 order-last">
+                            <div class="col-12 col-md-12">
+                                <div class="card">
+                                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                                        <label for="file">Selecione um arquivo:</label>
+                                        <input type="file" name="file" id="file"><br><br>
+
+                                        <label for="condominio">Selecione o condomínio:</label>
+                                        <select name="condominio" id="condominio">
+                                            <!-- Aqui você pode adicionar as opções de condomínios dinamicamente com PHP -->
+                                            <option value="condominio1">Condomínio 1</option>
+                                            <option value="condominio2">Condomínio 2</option>
+                                            <!-- ... -->
+                                        </select><br><br>
+
+                                        <input type="submit" name="submit" value="Upload">
+                                    </form>
+                                    <div class="card-header">
+                                        <h5 class="card-title">Multiple Files</h5>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            <p class="card-text">Using the basic table up, upload here to see how
+                                                <code>.multiple-files-filepond</code>-based basic file uploader look.
+                                                You can use
+                                                <code>allowMultiple</code> or <code>multiple</code> attribute too to
+                                                implement multiple
+                                                upload.
+                                            </p>
+                                            <!-- File uploader with multiple files upload -->
+                                            <input type="file" class="multiple-files-filepond" multiple>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <!--Footer-->
+            <footer class="">
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2021 &copy; Mazer</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--End Footer-->
+
+        </div>
+    </div>
+
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

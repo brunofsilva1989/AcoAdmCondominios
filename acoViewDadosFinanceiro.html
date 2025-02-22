@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Financeiro ACO</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <!--<a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>-->
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2"
+                                    alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu Lateral da Página-->
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastroFinanceiro.html">Cadastro Financeiro</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoViewDadosFinanceiro.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosDownload.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+                <!--Fim do Menu Lateral da Página-->
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!--Logout-->
+            <div class="card text-end">
+                <div class="card-body">
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="/acoLoginPainel.html" id="logoutButton">Sair do Sistema</a>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Logout-->
+
+            <!--Breadcrumbs-->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Visualização dados Financeiro</h4>
+                </div>
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="painelindex.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Relatórios Financeiros</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!--Breadcrumbs-->
+
+            <!--Inicio da Geração do relatório-->
+            <section id="multiple-column-form" class="section">
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                Balancete Condominal
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form class="form" action="./PHP/Financeiro/acoGeraBalancete.php" method="get">
+                                        <div class="row">
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="condominio_id">Condomínio:</label>
+                                                    <select class="form-control" id="condominio_id3" name="condominio_id3">
+                                                        <!-- Opções de condomínios carregadas aqui -->
+                                                    </select><br><br>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="data_inicio">Data de Início:</label>
+                                                    <input class="form-control" type="date" id="data_inicio" name="data_inicio"><br><br>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="data_fim">Data de Fim:</label>
+                                                    <input class="form-control" type="date" id="data_fim" name="data_fim"><br><br>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 d-flex justify-content-between">
+                                                <input class="btn btn-outline-primary me-1 mb-1" type="submit" value="Gerar Relatório">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Fim da Geração do relatório-->
+            
+            
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>&nbsp; &nbsp; &nbsp; &nbsp; 2023 All Rigts Reserved &copy; <a
+                                href="https://www.acoadmcondominios.com.br" target="_blank">ACO Adm Condomínios</a></p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-primary"><i class="bi bi-house-door"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--Fim footer-->
+        </div>
+
+        <!--Inicio footer-->
+        
+    </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+    <script src="assets/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/financeiro.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+</body>
+</html>

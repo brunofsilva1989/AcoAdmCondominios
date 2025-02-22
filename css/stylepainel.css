@@ -1,0 +1,7 @@
+/* Stilos especiais */
+
+/* Arquivo CSS */
+.btn-progress {
+    margin-right: 10px; /* Adiciona uma margem à direita dos botões para separá-los */
+    min-width: 100px; /* Define uma largura mínima para os botões para garantir que tenham o mesmo tamanho */
+}

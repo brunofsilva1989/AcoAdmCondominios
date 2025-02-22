@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Administração de Condomínios">
+    <meta name="author" content="Bruno Silva">
+    <meta name="keywords"
+        content="Condomínio, Administração, Administração Financeira, Prestação de Contas, Limpeza, Ação Social">
+    <meta name="format-detection" content="telephone=no">
+    <title>ACO Administração de Condomínios</title>
+    <link rel="canonical" href="www.acoadmcondominios.com.br">
+    <!--FAVICON-->
+    <link rel="icon" type="image/x-icon" href="aco.ico">
+
+
+    <!--CSS LOCAL-->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!--FONTE AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--JS LOCAL-->
+    <script src="/js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!--HEADER-->
+    <header>
+        <!--SESSÃO NAVBAR - MENU-->
+        <nav id="custom-nav" class="navbar navbar-expand-lg bg-body-tertiary">
+            <div id="custom-nav" class="container-fluid justify-content-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="/img/logo.png" height="100" alt="Aco Logo" loading="lazy" />
+                </a>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#quem-somos">Quem Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#planosModal">Planos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal"
+                                data-bs-target="#contatoModal">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal"
+                                data-bs-target="#propostaModal">Proposta</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link custom-politica" aria-current="page" href="politica-privacidade.html"
+                                target="_blank">Politica de Privacidade</a>
+                        </li> -->
+                    </ul>
+                </div>
+                <a class="btn btn-outline-secondary custom-area animate__animated animate__bounce animate__lightSpeedInRight"
+                    role="button" href="/acoLoginPainel.html">Área Condomínio</a>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!--MAIN-->
+    <main>
+        <!--Sessão Banner-->
+        <section class="banner">
+            <div class="parallax-container">
+                <div class="banner-content text-center">
+                    <h1 class="animate__animated animate__bounce animate__fadeInDown">Bem-Vindo à ACO Condomínios</h1>
+                    <p class="animate__animated animate__bounce animate__fadeInLeft">Oferecemos as melhores soluções,
+                        para a gestão do seu condomínio.</p>
+                    <a href="#contato" class="btn btn-secondary animate__animated animate__bounce animate__fadeInUp"
+                        data-bs-toggle="modal" data-bs-target="#saibaMaisModal">Saiba Mais!</a>
+                </div>
+            </div>
+        </section>
+
+        <!--Sessão Cards (Missao e Visão)-->
+        <section id="quem-somos">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <h1>Quem Somos</h1>
+                        <p>A ACO Administração de Contas de Condomínios é uma empresa, que tem
+                            por objetivo, contribuir junto aos seus condôminos, zelando pela organização
+                            financeira, planejamentos estratégicos, métodos bem definidos, seguido de
+                            ações sustentáveis e transparentes. Oferecemos serviços administrativos,
+                            aos condomínios de forma eficiente e
+                            transparente, sugerindo propostas de melhorias e orientando o síndico, para
+                            que juntos, possamos realizar uma gestão de qualidade, que contribua para
+                            a valorização do imóvel e proporcione segurança e qualidade de vida aos
+                            condôminos.</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h1>Missão / Valores</h1>
+                        <p>Oferecer serviços administrativos, financeiros, planejamentos estratégico,
+                            projetos de melhorias aos condomínios de forma ágil, eficiente e
+                            transparente;
+                            Sugerir propostas e atuar em uma gestão que contribua para a valorização
+                            do imóvel e proporcione segurança e qualidade de vida aos condôminos;
+                            Zelar pelas pessoas, acreditando que estas são o grande diferencial do
+                            nosso trabalho e que torna tudo possível.
+                            <span>Nossa gestão está pautada em três pilares: Planejar, Dirigir e Controlar,
+                                focando sempre no Atendimento acolhedor, Profissionalismo,
+                                Transparência, Honestidade, Respeito às pessoas, Determinação e Garra.</span>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Carousel Nossos Servicos-->
+        <section>
+            <div id="solucoesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <h5>Limpeza</h5>
+                            <p>Limpeza nas áreas comuns(Incluso material e equipamento) **Exclusivo - Plano
+                                Essencial
+                            </p>
+                        </div>
+                        <img src="/img/limpeza1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item active">
+                        <div class="carousel-content">
+                            <h5>Gestão Administrativa</h5>
+                            <p>Gerenciamento de seus arquivos e documentos, com a garantia de que tudo estará em ordem
+                                e
+                                disponível quando necessário.
+                            </p>
+                        </div>
+                        <img src="/img/adm-1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <h5>Auxílio Jurídico</h5>
+                            <p>Atualização de Convenção e Regimento Interno, com a garantia de que tudo estará em ordem
+                                e
+                                disponível quando necessário.
+                            </p>
+                        </div>
+                        <img src="/img/auxilio-juridico.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-content">
+                            <h5>Gestão Financeira</h5>
+                            <p>Controle de contas a pagar e receber, com a garantia de que tudo estará em ordem e
+                                disponível quando necessário.
+                            </p>
+                        </div>
+                        <img src="/img/gestaofin1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <!-- Adicione mais itens conforme necessário -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#solucoesCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#solucoesCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!--SESSAO MODAIS-->
+
+    <!--MODAL PLANOS-->
+    <div class="modal fade" id="planosModal" tabindex="-1" aria-labelledby="planosModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Cabeçalho do Modal -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="planosModalLabel">Conheça Nossos Planos</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <!-- Corpo do Modal com os Planos -->
+                <div class="modal-body">
+
+                    <h2>Plano Essencial</h2>
+                    <h5>Apartamentos Multi-Familiar (de 04 à 24 unidades)
+                    </h5>
+                    <p>Este plano, inclui:
+                        Gestão Financeira (emissão de boletos bancários, mensal e individual à cada
+                        condômino); Todos os boletos são enviados individualmente, bem como
+                        estarão disponíveis na Área do Condômino;
+                        Cobranças individualizadas;
+                        Pagamentos das contas mensais, da área comum do prédio, como: contas
+                        de consumo (energia, água, gás, internet);
+                        Contratação da equipe de limpeza da área comum (com pacotes de
+                        limpezas, conforme a necessidade e desejo de cada prédio, podendo ser
+                        limpezas semanais, quinzenais ou mensais);
+                        Prestação de Serviços e Acompanhamento de todos os projetos de melhoria
+                        do prédio, sendo planejamento para manutenções assertivas, ajustes
+                        emergenciais, controle de monitoramento de extintores, acompanhamento
+                        para renovação de AVCB, etc;
+                        Gestão Administrativa, com fechamentos mensais, envio e disponibilização
+                        dos balancetes, de cada prédio, prezando pela transparência e eficácia de
+                        cada prédio.
+                        Neste pacote, o valor mensal à ser pago por cada condômino, fica à critério
+                        de cada prédio, pois trabalhamos exatamente com os valores dos rateios,
+                        deteminados pelos próprios condôminos. E este é nosso grande diferencial,
+                        pois projetamos os planos de ação, com base nos valores arrecadados,
+                        conforme a disponibilidade e desejo de nossos clientes, nos adequando à
+                        realidade de cada prédio, fazendo com que tenhamos um atendimento
+                        diferencial e personalizado.
+                    </p>
+                    <button id="btnEssencial" type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#propostaModal">Solicitar Proposta Essencial</button>
+                    <br><br><br><br>
+
+                    <h2>Plano Premium</h2>
+                    <h5>Apartamentos Multi-Familiar (de 04 à 24 unidades)
+                    </h5>
+                    <p>Este plano, inclui:
+                        Auxílio Jurídico;
+                        Vistorias presenciais por técnicos responsáveis;
+                        Gestão Financeira (emissão de boletos bancários, mensal e individual à cada
+                        condômino); Todos os boletos são enviados individualmente, bem como
+                        estarão disponíveis na Área do Condômino;
+                        Cobranças individualizadas;
+                        Pagamentos das contas mensais, da área comum do prédio, como: contas
+                        de consumo (energia, água, gás, internet);
+                        Contratação da equipe de limpeza da área comum (com pacotes de
+                        limpezas, conforme a necessidade e desejo de cada prédio, podendo ser
+                        limpezas semanais, quinzenais ou mensais);
+                        Prestação de Serviços e Acompanhamento de todos os projetos de melhoria
+                        do prédio, sendo planejamento para manutenções assertivas, ajustes
+                        emergenciais, controle de monitoramento de extintores, acompanhamento
+                        para renovação de AVCB, etc;
+                        Gestão Administrativa, com fechamentos mensais, envio e disponibilização
+                        dos balancetes, de cada prédio, prezando pela transparência e eficácia de
+                        cada prédio.
+                        Neste pacote, o valor mensal à ser pago por cada condômino, fica à critério
+                        de cada prédio, pois trabalhamos exatamente com os valores dos rateios,
+                        deteminados pelos próprios condôminos. E este é nosso grande diferencial,
+                        pois projetamos os planos de ação, com base nos valores arrecadados,
+                        conforme a disponibilidade e desejo de nossos clientes, nos adequando à
+                        realidade de cada prédio, fazendo com que tenhamos um atendimento
+                        diferencial e personalizado.
+                    </p>
+                    <button id="btnPremium" type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#propostaModal">Solicitar Proposta Premium</button>
+                    <br><br><br><br>
+
+                    <h2>Plano Master</h2>
+                    <h5>Torre (Residencial ou Comercial)
+                    </h5>
+                    <p>Este plano, inclui:
+                        Auxílio Jurídico;
+                        Vistorias presenciais por técnicos responsáveis;
+                        Contratação de Mão de Obra Especializada e Terceirizada (recepção,
+                        limpeza, segurança, zelador, síndico, manutenção de elevadores, bomba,
+                        parte elétrica, sistema de segurança, gerador, recarga de extintores, pára raio,
+                        dedetização, desratização, limpeza de caixa d’água, seguro, AVCB, etc);
+                        Gestão Financeira (emissão de boletos bancários, mensal e individual à cada
+                        condômino); Todos os boletos são enviados individualmente, bem como
+                        estarão disponíveis na Área do Condômino;
+                        Cobranças individualizadas;
+                        Pagamentos das contas mensais, da área comum do prédio;
+                        Prestação de Serviços e Acompanhamento de todos os projetos de melhoria
+                        do prédio, sendo planejamento para manutenções assertivas, ajustes
+                        emergenciais;
+                        Gestão Administrativa, com fechamentos mensais, envio e disponibilização
+                        dos balancetes, de cada prédio, prezando pela transparência e eficácia de
+                        cada prédio.
+                    </p>
+                    <button id="btnMaster" type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#propostaModal">Solicitar Proposta Master</button>
+                    <br><br><br><br>
+                </div>
+
+                <!-- Rodapé do Modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL CONTATO-->
+    <div class="modal fade" id="contatoModal" tabindex="-1" aria-labelledby="contatoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Cabeçalho do Modal -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="contatoModalLabel">Formulário de Contato</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <!-- Corpo do Modal com o Formulário -->
+                <div class="modal-body">
+                    <form action="https://formsubmit.co/contato@acoadmcondominios.com.br" method="post">
+                        <input type="hidden" name="_next" value="https://www.acoadmcondominios.com.br/sucesso.html">
+                        <input type="hidden" name="_subject" value="Novo contato recebido do site!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome:</label>
+                            <input type="text" class="form-control" id="name" placeholder="Digite seu nome" name="name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email"
+                                name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tel" class="form-label">Telefone:</label>
+                            <input type="tel" class="form-control" id="tel" placeholder="Digite seu telefone com DDD"
+                                name="tel" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem:</label>
+                            <textarea class="form-control" id="message" placeholder="Digite sua mensagem" name="message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Enviar</button>
+                    </form>
+                    <hr> <!-- Adiciona uma linha horizontal para separar o formulário do mapa -->
+
+                    <!-- Mapa do Google -->
+                    <div class="map-container">
+                        <h5>Encontre-nos aqui:</h5>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.0500327603545!2d-46.49325448554172!3d-23.59859446865314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce423be1f3bf55%3A0x9f6e24e76d321d22!2sR.%20Mangaratu%2C%208%20-%20Vila%20Curu%C3%A7%C3%A1%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009210-450!5e0!3m2!1sen!2sbr!4v1632491654581!5m2!1sen!2sbr"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MODAL PROPOSTA-->
+    <!-- Modal de Proposta -->
+    <div class="modal fade" id="propostaModal" tabindex="-1" aria-labelledby="propostaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Cabeçalho do Modal -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="propostaModalLabel">Solicitar Proposta</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <!-- Corpo do Modal com o Formulário -->
+                <div class="modal-body">
+                    <form action="/PHP/PHPSite/proposta.php" method="post">
+                        <input type="hidden" name="_next"
+                            value="https://www.acoadmcondominios.com.br/sucessoproposta.html">
+                        <input type="hidden" name="_subject" value="Nova proposta recebida pelo site - Verificar!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <div class="row">
+                            <div class="mb-3 col-md-6">
+                                <label for="name" class="form-label">Nome:</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome"
+                                    required>
+                            </div>
+                            <div class="mb-3 col-md-6">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email" name="email"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="mb-3 col-md-4">
+                                <label for="units" class="form-label">N° de Unidades:</label>
+                                <input type="number" class="form-control" id="units" placeholder="Número de unidades"
+                                    name="units" required>
+                            </div>
+                            <div class="mb-3 col-md-4">
+                                <label for="phone" class="form-label">Telefone:</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Telefone" name="phone"
+                                    required>
+                            </div>
+                            <div class="mb-3 col-md-4">
+                                <label for="cityState" class="form-label">Cidade/Estado:</label>
+                                <input type="text" class="form-control" id="cityState" placeholder="Cidade/Estado"
+                                    name="cityState" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="plan" class="form-label">Selecione o Plano:</label>
+                            <select class="form-select" id="plan" name="plan" required>
+                                <option id="um" value="" selected disabled>Escolha um plano</option>
+                                <option id="um" value="Essencial">Plano Essencial</option>
+                                <option id="um" value="Premium">Plano Premium</option>
+                                <option id="um" value="Master">Plano Master</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="reference" class="form-label">Como conheceu a ACO Adm Condomínios?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reference" id="google" value="Google"
+                                    required>
+                                <label class="form-check-label" for="google">Google</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reference" id="socialMedia"
+                                    value="Social Media" required>
+                                <label class="form-check-label" for="socialMedia">Facebook / Instagram</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reference" id="indication"
+                                    value="Indicação" required>
+                                <label class="form-check-label" for="indication">Indicação</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="reference" id="others" value="Outros"
+                                    required>
+                                <label class="form-check-label" for="others">Outros</label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-secondary">Solicitar Proposta</button>
+                    </form>
+                </div>
+
+                <!-- Rodapé do Modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--MAIS INFORMAÇÕES-->
+    <div class="modal fade" id="saibaMaisModal" tabindex="-1" aria-labelledby="saibaMaisModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- Cabeçalho do Modal -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="planosModalLabel">Informações ACO</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+
+                <!-- Corpo do Modal com os Saiba Mais -->
+                <div class="modal-body">
+                    <h2>ACO Adm de Contas de Condomínio</h2>
+
+                    <p>
+                        A ACO Administração de Contas de Condomínios é uma empresa, que tem
+                        por objetivo, contribuir junto aos seus condôminos, zelando pela organização
+                        financeira, planejamentos estratégicos, métodos bem definidos, seguido de
+                        ações sustentáveis e transparentes.
+                        Oferecemos serviços administrativos, aos condomínios de forma eficiente e
+                        transparente, sugerindo propostas de melhorias e orientando o síndico, para
+                        que juntos, possamos realizar uma gestão de qualidade, que contribua para
+                        a valorização do imóvel e proporcione segurança e qualidade de vida aos
+                        condôminos.
+                    </p>
+                    <button id="btnMaster" type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                        data-bs-target="#contatoModal">Ir para Contato</button>
+                    <br><br><br><br>
+                </div>
+
+                <!-- Rodapé do Modal -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--SESSAO FOOTER-->
+    <footer id="custom-footer" class="bg-light text-bg-info pt-4 custom-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4">
+                    <h3>Contato</h3>
+                    <ul class="list-unstyled">
+                        <li id="endereco"><i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;Santo André / SP
+                        </li>
+                        <li id="tele"><i class="fas fa-phone"></i> (11) 99627-0291</li>
+                        <li><i class="fas fa-envelope"></i>
+                            <a href="mailto:contato@acoadmcondominios.com.br"
+                                class="text-dark">contato@acoadmcondominios.com.br</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <h3>Nossas Redes</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fab fa-facebook"></i>
+                            <a href="https://www.facebook.com/profile.php?id=61551915867403&mibextid=ZbWKwL"
+                                class="text-dark">Facebook</a>
+                        </li>
+                        <li><i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/acoadmdecondominios/?igshid=YTQwZjQ0NmI0OA%3D%3D"
+                                class="text-dark">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <h3>Links Úteis</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-external-link-alt"></i>
+                            <a href="https://www.acoadmcondominios.com.br" class="text-dark">ACO ADM CONDOMINIOS</a>
+                        </li>
+                        <li><i class="fas fa-external-link-alt"></i>
+                            <a href="https://www.acoadmcondominios.com.br/login.html" class="text-dark">Área do
+                                Condomínio</a>
+                        </li>
+                        <li><i class="fas fa-external-link-alt"></i>
+                            <a href="https://www.acoadmcondominios.com.br/privacidade.html" class="text-dark">Politica
+                                de Privacidade ACO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3 bg-secondary text-light w-100">
+            <p class="mb-0">ACO Adm de Condomínios - Todos os direitos reservados &copy; 2023 - Criado por
+                <a href="https://brunofsilva1989.github.io/portfolio/" target="_blank" class="text-light">Bruno Silva</a>
+            </p>
+        </div>
+    </footer>
+
+    <!--BOTAO WHATSAPP-->
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/5511996270291" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+    <!--BOTAO MESSENGER SITE-->
+    <div class="fb-customerchat" attribution="setup_tool" page_id="YOUR_PAGE_ID" theme_color="#17a2b8"
+        logged_in_greeting="Olá! Como posso ajudá-lo?" logged_out_greeting="Olá! Como posso ajudá-lo?">
+    </div>
+
+    <!--JS DO BOOTSTRAP 5.3-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+
+    <!--SESSAO DE SEGURANÇA DOS COOKIES DO SITE-->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Usamos cookies para oferecer a melhor experiência possível. Ao continuar, você concorda com a nossa <a
+                href="politica-privacidade.html">Política de Privacidade</a>.</p>
+        <button id="accept-cookies" class="cookie-btn">Aceitar</button>
+        <button id="decline-cookies" class="cookie-btn">Recusar</button>
+    </div>
+
+    <!--SCRIPT DE PLUGIN MESSENGER FACEBOOK-->
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+</body>
+
+</html>

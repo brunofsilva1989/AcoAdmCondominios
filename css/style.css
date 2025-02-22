@@ -1,0 +1,715 @@
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+/*PALETA DE CORES DO SITE*/
+
+:root {
+    --primary-color: #39b1e3;
+    --secondary-color: #dbf3fb;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #3b5e7a;
+    --body-bg: #dde5e7;
+    --body-color: #2e728e;
+}
+
+/*RESET DE ESTILOS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--body-bg)!important;
+    color: var(--body-color)!important;
+}
+
+/*CONFIGURAÇÕES DO NAVBAR*/
+/* Adiciona o estilo específico para o menu */
+#custom-nav{
+    background-color: var(--body-bg);
+}
+
+.navbar {
+    background-color: var(--body-bg) !important;
+    /* Define a cor de fundo do menu */
+    font-family: 'Roboto', sans-serif;
+    /* Muda a fonte para Roboto */
+}
+
+.nav-link {
+    color: var(--body-bg) !important;
+    /* Muda a cor do texto dos links */
+    font-weight: 500;
+    /* Aumenta a espessura da fonte */
+    transition: color 0.3s;
+    /* Adiciona uma transição suave para a cor do texto */
+}
+
+.nav-link:hover {
+    color: var(--body-bg) !important;
+    /* Muda a cor do texto ao passar o mouse */
+}
+
+.navbar-brand img {
+    transition: transform 0.3s;
+    /* Adiciona uma transição suave para o logo */
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do logo ao passar o mouse */
+}
+
+.btn-outline-info {
+    border-color: var(--body-bg);
+    /* Muda a cor da borda do botão */
+    color: var(--secondary-color);
+    /* Muda a cor do texto do botão */
+    transition: background-color 0.3s, color 0.3s;
+    /* Adiciona uma transição suave para a cor de fundo e texto */
+}
+
+.btn-outline-info:hover {
+    background-color: var(--secondary-color);
+    /* Muda a cor de fundo ao passar o mouse */
+    color: #7b9db3;
+    /* Muda a cor do texto ao passar o mouse */
+}
+
+.nav-link {
+    color: var(--dark-color) !important;
+    font-size: 24px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    transition: color 0.3s !important;
+}
+
+/*BOTAO AREA CONDOMINIO*/
+.custom-area {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    background-color: var(--light-color) !important;
+    color: var(--dark-color)!important;
+}
+
+@media (max-width: 768px) {
+    #quem-somos p {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.6; /* Ajuste conforme necessário */
+    }
+
+    #quem-somos h1 {
+        margin-bottom: 15px; /* Ajuste conforme necessário */
+        color: var(--dark-color)!important;
+    }
+}
+
+
+/*CONFIGURAÇÃO ESPECIAL LINK PRIVACIDADE*/
+/* CSS para o link da política de privacidade */
+.custom-politica {
+    color: var(--info-color)!important; /* Cor padrão do link */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.custom-politica:hover {
+    color:var(--primary-color)!important; /* Cor quando o mouse passa sobre o link */
+}
+
+
+
+/*CONFIGURAÇÕES DO SITE CUSTOMIZADAS*/
+
+/* Reset some default styling */
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: var(--body-bg);
+}
+
+/* Estilo para a seção 'Quem Somos' */
+#quem-somos {
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    padding: 50px 20px;
+    border-bottom: 5px solid var(--body-bg);
+}
+
+/* Estilo para o container */
+#quem-somos .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para os cabeçalhos */
+#quem-somos h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+/* Estilo para os parágrafos */
+#quem-somos p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Estilo para span dentro dos parágrafos, caso você queira destacar alguma parte do texto */
+#quem-somos p span {
+    color: var(--body-color);
+    font-weight: bold;
+}
+
+/* Estilos para responsividade e ajustes para telas menores */
+@media (max-width: 768px) {
+    #quem-somos h1 {
+        font-size: 2em;
+    }
+
+    #quem-somos p {
+        font-size: 1em;
+    }
+}
+
+/*************************************************/
+
+/*CONFIGURAÇÕES DO BANNER*/
+/* Estilo para o banner */
+.banner {
+    background-color: var(--light-color);
+    /* Ou outra cor clara de sua escolha */
+    background-image: url('/img/img-paralax.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Adiciona o efeito parallax */
+    height: 70vh;
+    /* Define a altura do banner */
+    color:var(--light-color);
+    /* Define a cor do texto */
+    position: relative;
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(82, 81, 81, 0.5);
+    ;
+    /* Adiciona um overlay escuro */
+    z-index: 1;
+}
+
+/* Estilo para o conteúdo do banner */
+.banner-content {
+    font-family: 'Roboto', sans-serif;
+    color: var(--light-color);
+    /* Cor do texto, ajuste conforme necessário */
+    z-index: 2;
+    /* Certifica que o texto aparece sobre o overlay */
+    background-color: transparent !important;
+    position: relative;
+    z-index: 1;
+    max-width: 80%;
+    padding-top: 180px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Adiciona uma sombra no texto para melhorar a legibilidade */
+}
+
+/* Estilo para o cabeçalho dentro do conteúdo do banner */
+.banner-content h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Estilo para o parágrafo dentro do conteúdo do banner */
+.banner-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Estilo para o botão dentro do conteúdo do banner */
+.banner-content .btn-primary {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.banner-image-container {
+    position: relative;
+}
+
+.banner-content-container {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.banner-content {
+    max-width: 600px;    
+}
+
+@media (max-width: 992px) {
+    .banner-content-container {
+        padding: 30px;
+    }
+
+    .banner-content h1 {
+        font-size: 24px;
+        /* Ajustar o tamanho da fonte conforme necessário */
+    }
+
+    .banner-content p {
+        font-size: 16px;
+        /* Ajustar o tamanho da fonte conforme necessário */
+    }
+
+    .banner-content .btn-primary {
+        font-size: 0.9rem;        
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content-container {
+        padding-bottom: 50px;
+    }
+
+    .banner-content{
+        padding-top: 100px;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .banner-content .btn-primary {
+        font-size: 0.9rem;        
+    }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .banner-content {
+        padding-bottom: 80px; /* Ajusta o espaçamento na parte inferior do conteúdo do banner */
+    }
+    
+    .banner-content a.btn {
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+        padding: 10px 20px; /* Ajusta o preenchimento interno do botão */
+    }
+    
+    .banner-content p {
+        margin-bottom: 40px; /* Ajusta o espaçamento abaixo do parágrafo */
+    }
+}
+
+
+/*************************************************/
+
+
+/*CONFIGURAÇÕES DO CAROUSEL PRINCIPAL*/
+.carousel-inner img {
+    width: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border: none;
+}
+
+/* Suaviza os cantos do fundo do texto */
+/* Estilo global */
+.carousel-inner {
+    height: auto !important;
+}
+
+@media (max-width: 768px) { 
+    .carousel-inner .carousel-item img {
+        object-fit: cover;
+        height: auto; 
+        max-height: 300px; 
+    }
+
+    .carousel-inner .carousel-content {
+        position: absolute;
+        bottom: 10px;
+        left: 50%; 
+        transform: translateX(-50%); 
+        text-align: center; 
+        width: 80%; 
+        background: rgba(0, 0, 0, 0.5); 
+        padding: 10px; 
+        border-radius: 5px; 
+        overflow: hidden;
+    }
+
+    .carousel-inner, .carousel-item, .carousel-item img {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 767px) {
+    .carousel-inner {
+        max-height: 100vh; /* ou o valor que se ajusta bem ao seu design */
+        height: auto !important;
+    }
+
+    .carousel-item {
+        display: flex;
+        align-items: center; /* para centralizar o conteúdo, se necessário */
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/*************************************************/
+
+
+/*CONFIGURAÇÕES DO CAROUSEL SERVICOS*/
+.carousel-content {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--light-color);
+    padding: 20px;
+    text-align: center;
+    max-width: 80%;
+    border-radius: 5px;
+}
+
+.carousel-content h5 {
+    font-size: 1.2rem;
+}
+
+.carousel-content p {
+    font-size: 0.9rem;
+}
+
+/* Ajustar o tamanho do texto para telas pequenas */
+@media (max-width: 768px) {
+    .carousel-content h5 {
+        font-size: 1rem;
+    }
+
+    .carousel-content p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ajustar o tamanho das imagens do carrossel para que sejam responsivas */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-inner {
+    height: 500px;
+    /* ou qualquer outra altura que você desejar */
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/*CONFIGURAÇOES DO FOOTER*/
+
+#name{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+#email{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+#tel{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+#message{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+#units{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+#phone{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+#cityState{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+#plan{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+#um{
+    color: var(--light-color);
+    background-color: var(--light-color);
+}
+
+footer .container {
+   background-color: var(--body-bg)!important;
+}
+
+.custom-footer{
+    background-color: var(--body-bg)!important;
+}
+
+#custom-footer{
+    background-color: var(--body-bg)!important;
+}
+
+.modal-footer{
+    background-color: var(--body-bg)!important;
+}
+
+footer {
+    background-color: var(--body-bg)!important;
+    color: var(--dark-color);
+    padding: 50px 5px;
+    font-family: 'Roboto', sans-serif;
+    /* Aplicando a fonte Roboto */
+}
+
+footer h3 {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    background-color: var(--body-bg);
+}
+
+footer ul li {
+    color: var(--dark-color);
+    /* Mudança da cor do texto */
+    margin-bottom: 10px;
+    background-color: var(--body-bg);
+}
+
+footer ul li a {
+    color: var(--dark-color);
+    /* Mudança da cor do link */
+    text-decoration: none;
+    background-color: var(--body-bg);
+}
+
+footer .bg-dark {
+    color: var(--dark-color);
+    background-color: var(--body-bg);
+}
+
+#endereco {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: left;
+    background-color: var(--body-bg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #endereco {
+        text-align: center;
+    }
+
+    footer ul li {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+/*************************************************/
+
+/*AJUSTES DOS MODAIS*/
+
+/*MODAL PLANOS*/
+.modal-content {
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;        
+}
+
+.modal-header h4{
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;        
+}
+
+.modal-header{
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;      
+}
+
+.modal-body{
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;        
+}
+
+#name{
+    color: var(--dark-color);
+}   
+
+#nome{
+    color: var(--dark-color);
+}
+
+#email{
+    color: var(--dark-color);
+}
+
+#units{
+    color: var(--dark-color);
+}
+
+#phone{
+    color: var(--dark-color);
+}
+
+#cityState{
+    color: var(--dark-color);
+}
+
+#plan{
+    color: var(--dark-color);
+}
+
+#um{
+    color: var(--dark-color);
+}
+
+#indication{
+    color: var(--dark-color);
+}
+
+#google{
+    color: var(--dark-color);
+}
+
+#socialMedia{
+    color: var(--dark-color);
+}
+
+#others{
+    color: var(--dark-color);
+}
+
+#tel{
+    color: var(--dark-color);
+}
+
+#message{
+    color: var(--dark-color);
+}
+
+.modal-body h2{
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;         
+}
+
+.modal-footer{
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;        
+}
+
+
+/*CONTROLE DE SEGURANÇA DOS COOKIES*/
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 1000;
+    text-align: center;
+    padding: 20px;
+    display: none;    
+}
+
+.cookie-btn {
+    margin-left: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #28a745;
+}
+
+.cookie-btn:last-child {
+    background-color: #dc3545;
+}
+
+/*CONFIGURAÇÃO DO BOTÃO WHATSAPP*/
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.whatsapp-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    text-decoration: none;
+    color: white;
+}

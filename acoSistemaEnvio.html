@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Padrão</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <!--<a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>-->
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2" alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu Lateral da Página-->
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <ul class="submenu ">
+                                    <li class="submenu-item ">
+                                        <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                    </li>
+                                    <li class="submenu-item ">
+                                        <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                    </li>
+                                    <li class="submenu-item ">
+                                        <a href="acoCadastroFinanceiro.html">Cadastro Financeiro</a>
+    
+                                    </li>
+                                    <li class="submenu-item ">
+                                        <a href="acoRelatoriosGeraisFin.html">Relatórios</a>
+    
+                                    </li>
+                                </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosDownload.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+                <!--Fim do Menu Lateral da Página-->
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!--Logout-->
+            <div class="card text-end">
+                <div class="card-body">
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="/acoLoginPainel.html" id="logoutButton">Sair do Sistema</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inicio do Header da Página -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Índice da Página</h4>
+                </div>
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/painelindex.html">Pagina Inicial</a></li>
+                            <li class="breadcrumb-item"><a href="/acoCadastrarClientes.html">Cadastro de Clientes</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Alterar Dados Cliente</li>
+                        </ol>
+                    </nav>                    
+                </div>
+            </div>
+            <!-- Fim do Header da Página -->
+
+            <!--Padão-->
+            <section id="multiple-column-form">
+                <div class="row match-height">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1 class="text-center">Sistema de Geração de Boleto</h1>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form action="enviar_boleto.php" method="POST">
+                                        <label for="nome_cliente">Nome do Cliente:</label>
+                                        <input type="text" id="nome_cliente" class="form-control" name="nome_cliente" placeholder="Digite o nome do Cliente" required>
+
+                                        <label for="valor">Valor:</label>
+                                        <input type="number" id="valor" class="form-control" name="valor" placeholder="R$" step="0.01" min="0" required>
+
+                                        <label for="data_vencimento">Data de Vencimento:</label>
+                                        <input type="date" id="data_vencimento" class="form-control" name="data_vencimento" required>
+
+                                        <label for="email_cliente">E-mail do Cliente:</label>
+                                        <input type="email" id="email_cliente" class="form-control" placeholder="Digite um e-mail válido" name="email_cliente" required>
+
+                                        <input type="submit" value="Enviar Boleto">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <br><br><br><br><br>
+            <!--Padrão Fim-->
+
+            <!--Tabela com condominios Cadastrados-->
+
+            <!--Fim da Tabela com condominios Cadastrados-->
+
+
+
+            <!--Footer-->
+            <footer class="">
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2023 &copy; ACO Adm de Condomínios</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-black"><i class="bi bi-arrow-clockwise"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--End Footer-->
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+
+
+    </script>
+</body>
+
+</html>

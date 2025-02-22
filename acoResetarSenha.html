@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Redefinir Senha</h2>
+        <form id="formRedefinirSenha">
+            <input type="hidden" name="token" id="token" value="<?php echo $_GET['token']; ?>">
+            <div class="form-group">
+                <label>Nova Senha</label>
+                <input type="password" id="novaSenha" name="novaSenha" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Redefinir Senha</button>
+        </form>
+        <div id="mensagemRetorno"></div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $("#formRedefinirSenha").submit(function (e) {
+        e.preventDefault();
+        var senha = $("#novaSenha").val();
+        var token = $("#token").val();
+        var mensagem = $("#mensagemRetorno");
+
+        mensagem.html("");
+
+        $.ajax({
+            type: "POST",
+            url: "PHP/Login/processarResetSenha.php",
+            data: { token: token, novaSenha: senha },
+            dataType: "json",
+            success: function (response) {
+                mensagem.html('<div class="alert alert-success">' + response.mensagem + '</div>');
+            },
+            error: function () {
+                mensagem.html('<div class="alert alert-danger">Erro ao redefinir senha.</div>');
+            }
+        });
+    });
+</script>
+</html>

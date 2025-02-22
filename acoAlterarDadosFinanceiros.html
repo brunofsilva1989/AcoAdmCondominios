@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alteração de Dados Financeiro</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <!--<a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>-->
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2"
+                                    alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu Lateral da Página-->
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastroFinanceiro.html">Cadastro Financeiro</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoViewDadosFinanceiro.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosDownload.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+                <!--Fim do Menu Lateral da Página-->
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!--Logout-->
+            <div class="card text-end">
+                <div class="card-body">
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="/acoLoginPainel.html" id="logoutButton">Sair do Sistema</a>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Logout-->
+
+            <!--Data Table Financeiro Inicio-->
+            <div class="page-heading">
+                <div class="page-title">
+                    <div class="row">
+                        <div class="col-12 col-md-6 order-md-1 order-last">
+                            <h3>Financeiro ACO</h3>
+                        </div>
+                        <div class="col-12 col-md-6 order-md-2 order-first">
+                            <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Cadastro Financeiro</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Logica de alteração de dados financeiros-->
+                <section class="section">
+                    <div class="card">
+                        <div class="card-header">
+                            Alterar Dados Financeiros
+                        </div>
+                        <div class="card-body">
+                            <form id="formAlterarTransacao" action="/PHP/Financeiro/acoAlterarDadosFinanceiros.php"
+                                method="post">
+                                <input type="hidden" id="id" name="id" value="">
+                                
+                                <!-- O valor do ID deve ser inserido via JavaScript ou no backend -->
+
+                                <div class="form-group">
+                                    <label for="tipo_transacao">Tipo Transação:</label>
+                                    <!-- <input type="text" class="form-control" id="tipo_transacao" name="tipo_transacao"
+                                        required> -->
+                                    <select type="text" name="tipo_transacao" id="tipo_transacao" class="form-control">
+                                        <option value="entrada">Entrada</option>
+                                        <option value="saida">Saida</option>
+                                    </select>    
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="morador">Morador:</label>
+                                    <input type="text" class="form-control" id="nome_morador" name="nome_morador" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="categoria">Categoria:</label>
+                                    <!-- <input type="text" class="form-control" id="categoria" name="categoria"> -->
+                                    <select type="text" name="categoria" id="categoria" class="form-control">
+                                        <option value="Atividades Administrativas">Atividades Administrativas</option>
+                                        <option value="Aluguel">Aluguel</option>
+                                        <option value="Condominio">Condominio</option>
+                                        <option value="Energia">Energia</option>
+                                        <option value="Gas">Gas</option>
+                                        <option value="Internet">Internet</option>
+                                        <option value="IPTU">IPTU</option>
+                                        <option value="Luz">Luz</option>
+                                        <option value="Manutencao">Manutencao</option>
+                                        <option value="Multa">Multa</option>
+                                        <option value="Outros">Outros</option>
+                                        <option value="Seguro">Seguro</option>
+                                        <option value="Telefone">Telefone</option>
+                                        <option value="TV">TV</option>
+                                        <option value="Venda">Venda</option>   
+                                    </select>                                     
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="descricao">Descricao:</label>
+                                    <input type="text" class="form-control" id="descricao" name="descricao">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="valor_recebido">Valor Pago:</label>
+                                    <input type="number" class="form-control" id="valor_recebido" name="valor_recebido" step="0.01" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="valor_receber">Valor a Receber:</label>
+                                    <input type="number" class="form-control" id="valor_receber" name="valor_receber" step="0.01" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="data_transacao">Data Transação:</label>
+                                    <input type="date" class="form-control" id="data_transacao" name="data_transacao"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="status_pagamento">Status Pagamento:</label>                                    
+                                    <select type="text" name="status_pagamento" id="status_pagamento" class="form-control">
+                                        <option value="Pago">Pago</option>
+                                        <option value="Pendente">Pendente</option>
+                                        <option value="Atrasado">Atrasado</option>
+                                        <option value="Cancelado">Cancelado</option>
+                                    </select>    
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="data_vencimento">Data Vencimento:</label>
+                                    <input type="date" class="form-control" id="data_vencimento" name="data_vencimento"
+                                        required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="data_pagamento">Data Pagamento:</label>
+                                    <input type="date" class="form-control" id="data_pagamento" name="data_pagamento"
+                                        required>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                                <button type="button" class="btn btn-secondary"
+                                    onclick="window.history.back();">Cancelar</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <!-- Fim da logica de alteração de dados financeiros-->
+            </div>
+
+            <footer>
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2023 All Rigts Reserved &copy; <a href="https://www.acoadmcondominios.com.br"
+                                target="_blank">ACO
+                                Adm
+                                Condomínios</a></p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-primary"><i class="bi bi-house-door"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="/js/financeiro.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        //Lista os dados dos registros financeiros no formulário
+        $(document).ready(function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var transacaoId = urlParams.get('id');
+            if (transacaoId) {
+                carregarDadosTransacao(transacaoId);
+            } else {
+                Swal.fire('Erro!', 'ID da transação não fornecido.', 'error');
+            }
+            //Carrega os dados no form para update
+            function carregarDadosTransacao(id) {
+                $.ajax({
+                    url: '/PHP/Financeiro/acoAlterarDadosFinanceiros2.php',
+                    type: 'GET',
+                    data: { id: id },
+                    dataType: 'json',
+                    success: function (transacao) {
+                        console.log(transacao);
+                        if (transacao.error) {
+                            Swal.fire('Erro!', 'Erro ao carregar os dados da transação.', 'error');
+                        } else {
+                            // Atualize os campos do formulário com os dados da transação
+                            $('#id').val(transacao.id);
+                            $('#tipo_transacao').val(transacao.tipo_transacao);
+                            $('#nome_morador').val(transacao.nome_morador);
+                            $('#categoria').val(transacao.categoria);
+                            $('#descricao').val(transacao.descricao);
+                            $('#valor_recedido').val(transacao.valor_recebido);
+                            $('#valor_receber').val(transacao.valor_receber);
+                            $('#data_transacao').val(transacao.data_transacao);
+                            $('#status_pagamento').val(transacao.status_pagamento);
+                            $('#data_vencimento').val(transacao.data_vencimento);
+                            $('#data_pagamento').val(transacao.data_pagamento);                            
+                        }
+                    },
+                    error: function (error) {
+                        Swal.fire('Erro!', 'Erro ao carregar os dados da transação.', 'error');
+                        console.error(error);
+                    }
+                });
+            }
+        });
+
+
+        $(document).ready(function () {
+            $('#formAlterarTransacao').on('submit', function (event) {
+                event.preventDefault(); // Prevenir que o formulário submeta por si só
+
+                $.ajax({
+                    url: '/PHP/Financeiro/acoAlterarTransacao.php',
+                    type: 'POST',
+                    data: $(this).serialize(), // Serializa os dados do formulário            
+                    dataType: 'json',
+                    success: function (response) {
+                        console.log(response.message);
+                        if (response.success) {
+                            Swal.fire({
+                                title: 'Dados atualizados com sucesso!',
+                                icon: 'success',
+                                confirmButtonText: 'OK'
+                            }).then(function () {
+                                // Redireciona para a página de cadastro de transações
+                                window.location.href = "./acoCadastroFinanceiro.html";
+                            });
+                        } else {
+                            Swal.fire({
+                                title: 'Erro ao atualizar os dados!',
+                                text: response.message,
+                                icon: 'warning',
+                                confirmButtonText: 'OK'
+                            });
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        Swal.fire({
+                            title: 'Erro ao atualizar os dados!',
+                            text: error,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/*PALETA DE CORES DO SITE*/
+
+:root {
+    --primary-color: #39b1e3;
+    --secondary-color: #dbf3fb;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #052f57;
+    --body-bg: #7b9db3;
+    --body-color: #2e728e;
+}
+
+/*RESET DE ESTILOS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.texto-centralizado {
+    text-align: center!important;
+    
+}
+
+.texto-centralizado h1, 
+.texto-centralizado h2 {
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;
+    /* Adicione outras propriedades conforme necessário */
+}
+
+.texto-centralizado p {
+    font-family: 'Roboto', sans-serif;
+    /* Cor padrão para o texto, pode ser ajustado conforme necessário */
+}
+
+/* Certifique-se de que os textos são responsivos e legíveis em dispositivos pequenos */
+@media (max-width: 768px) {
+    .texto-centralizado h1 {
+        font-size: 24px; /* Ajuste conforme necessário */
+    }
+
+    .texto-centralizado h2 {
+        font-size: 20px; /* Ajuste conforme necessário */
+    }
+
+    .texto-centralizado p {
+        font-size: 16px; /* Ajuste conforme necessário */
+    }
+}

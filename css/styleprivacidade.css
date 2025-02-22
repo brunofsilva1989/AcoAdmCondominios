@@ -1,0 +1,182 @@
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+/*PALETA DE CORES DO SITE*/
+
+:root {
+    --primary-color: #39b1e3;
+    --secondary-color: #dbf3fb;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #052f57;
+    --body-bg: #7b9db3;
+    --body-color: #2e728e;
+}
+
+/*CONFIGURAÇÕES DO NAVBAR*/
+/* Adiciona o estilo específico para o menu */
+.navbar {
+    background-color: var(--secondary-color) !important;
+    /* Define a cor de fundo do menu */
+    font-family: 'Roboto', sans-serif;
+    /* Muda a fonte para Roboto */
+}
+
+.nav-link {
+    color: var(--light-color) !important;
+    /* Muda a cor do texto dos links */
+    font-weight: 500;
+    /* Aumenta a espessura da fonte */
+    transition: color 0.3s;
+    /* Adiciona uma transição suave para a cor do texto */
+}
+
+.nav-link:hover {
+    color: #e0e0e0 !important;
+    /* Muda a cor do texto ao passar o mouse */
+}
+
+.navbar-brand img {
+    transition: transform 0.3s;
+    /* Adiciona uma transição suave para o logo */
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+    /* Aumenta o tamanho do logo ao passar o mouse */
+}
+
+.btn-outline-info {
+    border-color: var(--body-bg);
+    /* Muda a cor da borda do botão */
+    color: var(--secondary-color);
+    /* Muda a cor do texto do botão */
+    transition: background-color 0.3s, color 0.3s;
+    /* Adiciona uma transição suave para a cor de fundo e texto */
+}
+
+.btn-outline-info:hover {
+    background-color: var(--secondary-color);
+    /* Muda a cor de fundo ao passar o mouse */
+    color: #7b9db3;
+    /* Muda a cor do texto ao passar o mouse */
+}
+
+.nav-link {
+    color: var(--dark-color) !important;
+    font-size: 24px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    transition: color 0.3s !important;
+}
+
+/*BOTAO AREA CONDOMINIO*/
+.custom-area {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    background-color: var(--light-color) !important;
+    color: var(--dark-color)!important;
+}
+
+@media (max-width: 768px) {
+    #quem-somos p {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.6; /* Ajuste conforme necessário */
+    }
+
+    #quem-somos h1 {
+        margin-bottom: 15px; /* Ajuste conforme necessário */
+    }
+}
+
+/*BOTAO AREA CONDOMINIO*/
+.custom-area {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    background-color: var(--light-color) !important;
+    color: var(--dark-color)!important;
+}
+
+@media (max-width: 768px) {
+    #quem-somos p {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.6; /* Ajuste conforme necessário */
+    }
+
+    #quem-somos h1 {
+        margin-bottom: 15px; /* Ajuste conforme necessário */
+    }
+}
+
+/*CONFIGURAÇÕES DO TEXTO DA POLITICA*/
+.texto-centralizado{
+    text-align: center;
+    color: var(--dark-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/*CONFIGURAÇOES DO FOOTER*/
+
+footer {
+    background-color: var(--body-bg);
+    color: var(--dark-color);
+    padding: 50px 5px;
+    font-family: 'Roboto', sans-serif;
+    /* Aplicando a fonte Roboto */
+}
+
+footer h3 {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+}
+
+footer ul li {
+    color: var(--dark-color);
+    /* Mudança da cor do texto */
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: var(--dark-color);
+    /* Mudança da cor do link */
+    text-decoration: none;
+}
+
+footer .bg-dark {
+    color: var(--dark-color);
+}
+
+#endereco {
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer h3 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #endereco {
+        text-align: center;
+    }
+
+    footer ul li {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historico das Manutenções</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Modal de mensagens personalizadas-->
+    <div class="modal-success me-1 mb-1 d-inline-block">
+        <!-- Button trigger for Success theme modal -->
+        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#success">
+            Success
+        </button>
+        <!-- Modal de mensagens personalizadas-->
+        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title white" id="modalLabel">ACO ADM Condomínios</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- A mensagem será inserida aqui -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal"><i
+                                class="bx bx-x d-block d-sm-none"></i><span
+                                class="d-none d-sm-block">Fechar</span></button>
+                        <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                            <i class="bx bx-check d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">OK</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <!--<a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>-->
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2"
+                                    alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu Lateral da Página-->
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastroFinanceiro.html">Cadastro Financeiro</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoViewDadosFinanceiro.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosDownload.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+                <!--Fim do Menu Lateral da Página-->
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!--Logout-->
+            <div class="card text-end">
+                <div class="card-body">
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="/acoLoginPainel.html" id="logoutButton">Sair do Sistema</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inicio do Header da Página -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Índice da Página</h4>
+                </div>
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/painelindex.html">Pagina Inicial</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Histórico de Manutenção</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Fim do Header da Página -->
+
+            <!--Tabela de Solicitação de manutenção-->
+            <section class="section">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h1>Histórico de Manutenção</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="dados-manutencoes">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Data da Manutenção</th>
+                                        <th>Responsável</th>
+                                        <th>Descrição</th>
+                                        <th>Custo</th>
+                                        <th>Status da Manutenção</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="dados-manutencoes">
+                                    <!--Aqui vai ser carregado os dados do condominio cadastrado-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Tabela Solicitação de Manutenção-->
+
+            <!--Footer-->
+            <footer class="">
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2023 &copy; ACO Adm de Condomínios</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-black"><i class="bi bi-arrow-clockwise"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--End Footer-->
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/mensagensAlert.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+    <script type="text/javascript">
+        //Função para carregar os dados da tabela de manutenção.
+        $(document).ready(function () {
+            function renderTable() {
+                $.ajax({
+                    url: '/PHP/Condominios/listarHistoricoSolPrediais.php',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data) {
+                        var tbody = $('#dados-manutencoes tbody');
+                        tbody.empty();
+                        data.forEach(function (manutencao) {
+                            const row = `<tr>
+                            <td>${manutencao.id}</td>    
+                            <td>${manutencao.dataManutencao}</td>
+                            <td>${manutencao.responsavel}</td>
+                            <td>${manutencao.descricao}</td>
+                            <td>${manutencao.custo}</td>
+                            <td>${manutencao.statusManutencao}</td>
+                            <td>
+                                <button class="btn btn-primary btn-sm" onclick="concluir(${manutencao.id})">Concluir</button>
+                                <button class="btn btn-secondary btn-sm" onclick="alterar(${manutencao.id})">Alterar</button>
+                                <button class="btn btn-danger btn-sm" onclick="deletar(${manutencao.id})">Deletar</button>
+                            </td>
+                        </tr>`;
+                            tbody.append(row);
+                        });
+                    },
+                    error: function (error) {
+                        console.error('Erro na solicitação AJAX:', error);
+                        window.location.href = '/acoHistoricoManutencoes.html';
+                    }
+                });
+            }
+            renderTable();
+        });
+
+
+        //Função para concluir manutenção.
+        window.concluir = function (id) {
+            $.post('/PHP/Condominios/concluirManutencao.php', { id: id }, function (response) {
+                if (response.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Sucesso',
+                        text: 'Manutenção concluída com sucesso!'
+                    }).then(function () {
+                        window.location.href = '/acoHistoricoManutencoes.html';
+                    });
+                    renderTable();
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Erro ao concluir a manutenção!'
+                    });
+                }
+            }, 'json')
+                .fail(function () {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Erro',
+                        text: 'Erro ao comunicar com o servidor. Tente novamente.'
+                    });
+                });
+        };
+
+
+
+        //Função para começar a alteração do dado da manutenção.
+        window.alterar = function (id) {
+            window.location.href = '/acoAlterarManutencao.html?id=' + id; // Redireciona para a página de edição
+        };
+
+
+        //Função para deletar manutenção.
+        window.deletar = function (id) {
+            Swal.fire({
+                title: 'Tem certeza?',
+                text: "Deseja deletar esta manutenção?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, deletar!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.post('/PHP/Condominios/deletarManutencao.php', { id: id }, function (response) {
+                        if (response.success) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Deletado!',
+                                text: 'Manutenção deletada com sucesso!'
+                            }).then(function () {
+                                window.location.href = '/acoHistoricoManutencoes.html';
+                            });
+                            renderTable();
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Erro',
+                                text: 'Erro ao deletar a manutenção!'
+                            });
+                            console.error(response.error);
+                        }
+                    });
+                }
+            });
+        };
+    </script>
+</body>
+
+</html>

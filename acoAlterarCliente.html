@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACO Alterar Cadastro de Clientes</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="aco.ico" type="image/x-icon">
+
+</head>
+
+<body>
+   <div id="app">
+        <div id="sidebar" class="active">
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <div class="d-flex justify-content-between">
+                        <div class="logo">
+                            <!--<a href="painelindex.html">ACO ADM <br> &nbsp;&nbsp;&nbsp;&nbsp;Panel</a>-->
+                            <a href="painelindex.html"><img src="/img/logo.png" class="w-75 h-100 mt-1 pb-lg-2"
+                                    alt="Logo"></a>
+                        </div>
+                        <div class="toggler">
+                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-middle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--Menu Lateral da Página-->
+                <div class="sidebar-menu">
+                    <ul class="menu">
+                        <li class="sidebar-title">Menu</li>
+
+                        <li class="sidebar-item active ">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-grid-fill"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="painelindex.html" class='sidebar-link'>
+                                <i class="bi bi-building"></i>
+                                <span>Condomínios</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarCondominio.html">Cad. Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastrarClientes.html">Cad. Clientes</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoSolicitacoesPrediais.html">Sol. Prediais</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoHistoricoManutencoes.html">Hist. Manutenções</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-calculator"></i>
+                                <span>Financeiro</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoMP.html">Boletos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCobrancaBoletoPix.html">Boletos com Pix</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoCadastroFinanceiro.html">Cadastro Financeiro</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoViewDadosFinanceiro.html">Relatórios</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-mic"></i>
+                                <span>Comunicação</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="PaginaNaoEncontrada.html">Sem Definição</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item  has-sub">
+                            <a href="#" class='sidebar-link'>
+                                <i class="bi bi-archive"></i>
+                                <span>Documentos</span>
+                            </a>
+                            <ul class="submenu ">
+                                <li class="submenu-item ">
+                                    <a href="acoSistemaArquivos.html">Sistema Arquivos</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosCondominio.html">Documentos Condomínios</a>
+                                </li>
+                                <li class="submenu-item ">
+                                    <a href="acoDocumentosDownload.html">Outros Downloads</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-title">Outras Opções</li>
+                    </ul>
+                </div>
+                <!--Fim do Menu Lateral da Página-->
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+        <div id="main">
+            <header class="mb-3">
+                <a href="#" class="burger-btn d-block d-xl-none">
+                    <i class="bi bi-justify fs-3"></i>
+                </a>
+            </header>
+
+            <!--Logout-->
+            <div class="card text-end">
+                <div class="card-body">
+                    <div class="card-header">
+                        <a class="btn btn-primary" href="/acoLoginPainel.html" id="logoutButton">Sair do Sistema</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Índice da Página</h4>
+                </div>
+                <div class="card-body">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/painelindex.html">Pagina Inicial</a></li>
+                            <li class="breadcrumb-item"><a href="/acoCadastrarClientes.html">Cadastro de Clientes</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">Alterar Dados Cliente</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+
+            <section class="section">
+                <div class="card">
+                    <div class="card-header">
+                        Alterar Cadastro do Cliente
+                    </div>
+                    <div class="card-body">
+                        <form id="formAlterarCliente" action="/PHP/Condominios/acoCarregaDadosAlterarCliente.php"
+                            method="post">
+                            <input type="hidden" id="id" name="id" value="">
+                            <!-- O valor do ID deve ser inserido via JavaScript ou no backend -->
+
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone">Telefone:</label>
+                                <input type="text" class="form-control" id="telefone" name="telefone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone">CPF/CNPJ:</label>
+                                <input type="text" class="form-control" id="cpf_cnpj" name="cpf_cnpj">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf_cnpj">Endereço:</label>
+                                <input type="text" class="form-control" id="endereco" name="endereco" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf_cnpj">Número:</label>
+                                <input type="text" class="form-control" id="numero" name="numero" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf_cnpj">Complemento:</label>
+                                <input type="text" class="form-control" id="complemento" name="complemento" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf_cnpj">Bairro:</label>
+                                <input type="text" class="form-control" id="bairro" name="bairro" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf_cnpj">Cidade:</label>
+                                <input type="text" class="form-control" id="cidade" name="cidade" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf_cnpj">UF:</label>
+                                <input type="text" class="form-control" id="estado" name="estado" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cpf_cnpj">Cep:</label>
+                                <input type="text" class="form-control" id="cep" name="cep" required>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                            <button type="button" class="btn btn-secondary"
+                                onclick="window.history.back();">Cancelar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--Footer-->
+            <footer class="">
+                <div class="footer clearfix mb-0 text-muted">
+                    <div class="float-start">
+                        <p>2023 &copy; ACO Adm de Condomínios</p>
+                    </div>
+                    <div class="float-end">
+                        <p>Create <span class="text-black"><i class="bi bi-arrow-clockwise"></i></span> by <a
+                                href="www.bfsilva.com.br">Bruno Silva</a></p>
+                    </div>
+                </div>
+            </footer>
+            <!--End Footer-->
+        </div>
+    </div>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/mensagensAlert.js"></script>
+
+    <script>
+
+        //Lista os dados do cliente no formulário
+        $(document).ready(function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            var clienteId = urlParams.get('id');
+            if (clienteId) {
+                carregarDadosCliente(clienteId);
+            } else {
+                showMessage('ID do cliente não fornecido.');
+                // Redirecionar para outra página ou manipular como achar melhor
+            }
+            // Função para preencher o formulário com os dados do cliente
+            function carregarDadosCliente(id) {
+                $.ajax({
+                    url: '/PHP/Condominios/acoListarCadastroClientes2.php',// Endereço do script PHP que retorna os dados do cliente
+                    type: 'GET',
+                    data: { id: id },
+                    dataType: 'json',
+                    success: function (cliente) {
+                        if (cliente.error) {
+                            Swal.error('Erro ao carregar os dados do cliente.');
+                            // showMessage(cliente.error);
+                        } else {
+                            $('#id').val(cliente.id);
+                            $('#nome').val(cliente.nome);
+                            $('#email').val(cliente.email);
+                            $('#telefone').val(cliente.telefone);
+                            $('#cpf_cnpj').val(cliente.cpf_cnpj);
+                            $('#endereco').val(cliente.endereco);
+                            $('#numero').val(cliente.numero);
+                            $('#complemento').val(cliente.complemento);
+                            $('#bairro').val(cliente.bairro);
+                            $('#cidade').val(cliente.cidade);
+                            $('#estado').val(cliente.estado);
+                            $('#cep').val(cliente.cep);
+                        }
+                    },
+                    error: function (error) {
+                        Swal.error('Erro ao carregar os dados do cliente.');
+                        // showMessage('Erro ao carregar os dados do cliente.');
+                        console.error(error);
+                    }
+                });
+            }
+
+            // Supondo que o ID do cliente venha da URL, exemplo: acoAlterarCliente.html?id=123
+            var urlParams = new URLSearchParams(window.location.search);
+            var clienteId = urlParams.get('id');
+            if (clienteId) {
+                carregarDadosCliente(clienteId);
+            } else {
+                Swal.error('ID do cliente não fornecido.');
+                // showMessage('ID do cliente não fornecido.');
+                // Redirecionar para outra página ou manipular como achar melhor
+            }
+        });
+
+        // Essa função é usda para dar o update dos dados no banco, atualizando os dados do cliente
+        $(document).ready(function () {
+            $('#formAlterarCliente').on('submit', function (event) {
+                event.preventDefault(); // Prevenir que o formulário submeta por si só
+
+                $.ajax({
+                    url: '/PHP/Condominios/acoAlterarCliente.php', 
+                    type: 'POST',
+                    data: $(this).serialize(), // Serializa os dados do formulário            
+                    dataType: 'json',
+                    success: function (response) {                        
+                        console.log(response.success);                        
+                        if (response.success) {
+                            Swal.fire({
+                                title: 'Dados atualizados com sucesso!',
+                                icon: 'success',
+                                confirmButtonText: 'OK'
+                            });
+                            setTimeout(function () {
+                                window.location.href = "/acoCadastrarClientes.html";
+                            }, 2500);                                                  
+                        } else if (response.warning) {
+                            console.log(response.warning);
+                            alert(response.warning);
+                            Swal.fire({
+                                title: 'Erro ao atualizar os dados!',
+                                text: response.warning,
+                                icon: 'warning',
+                                confirmButtonText: 'OK'
+                            });                            
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        Swal.fire({
+                            title: 'Erro ao atualizar os dados!',
+                            text: error,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
+                        showMessage('Ocorreu um erro ao atualizar os dados: ' + error);
+                    }
+                });
+            });
+        });
+        
+    </script>
+</body>
+
+</html>
